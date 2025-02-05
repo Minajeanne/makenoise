@@ -1,14 +1,24 @@
 {
+    "version": "0.2.0",
     "configurations": [
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Launch Next.js App",
-        "program": "${workspaceFolder}/node_modules/.bin/next",
-        "args": ["dev"],
-        "runtimeExecutable": "npm",
-        "runtimeArgs": ["run-script", "dev"],
-        "port": 3000
-      }
+        {
+            "name": "Launch Next.js App",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+            "args": ["dev"],
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "node",
+            "env": {
+                "NODE_ENV": "development"
+            }
+        },
+        {
+            "name": "Launch Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        }
     ]
-  }
+}
