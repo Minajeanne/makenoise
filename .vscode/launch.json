@@ -1,10 +1,14 @@
 {
     "configurations": [
-        {
-            "type": "chrome",
-            "name": "https://localhost:3000",
-            "request": "launch",
-            "url": "https://localhost:3000"
-        }
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Next.js App",
+        "program": "${workspaceFolder}/node_modules/.bin/next",
+        "args": ["dev"],
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["run-script", "dev"],
+        "port": 3000
+      }
     ]
-}
+  }
